@@ -1,0 +1,48 @@
+{
+  "format": "ribbon-runtime-parts-v1",
+  "version": "0.0.23-coze.1",
+  "sha256": "bb4fb401ecf8c95d55dd7c0c774399a27d577a5623e1ce70f9adf6dc68a820de",
+  "size_bytes": 30735044,
+  "parts": [
+    {
+      "file": "runtime.zip.part-01",
+      "sha256": "223d42c741923da92cacba4cf9b93980e6c90ba4ce3c38db05af9d61c8f8b648",
+      "size_bytes": 4194304
+    },
+    {
+      "file": "runtime.zip.part-02",
+      "sha256": "f229fd1d08a3e4fcec0a5c021a8a71e8844e05a791f33d52859dab101d90cfb2",
+      "size_bytes": 4194304
+    },
+    {
+      "file": "runtime.zip.part-03",
+      "sha256": "f9fd28fada5cc5c16d474efe6b76cb0a83d687e6bbbd2ef1038a05985a8c2d4b",
+      "size_bytes": 4194304
+    },
+    {
+      "file": "runtime.zip.part-04",
+      "sha256": "26327a9ca897a6feb0f9304d730c7c9e20eb14bbb788add5af0d722435905db8",
+      "size_bytes": 4194304
+    },
+    {
+      "file": "runtime.zip.part-05",
+      "sha256": "498118478b8b079e077b4dcd304075334fe8ec17116007eb83dd45e5deea1d4b",
+      "size_bytes": 4194304
+    },
+    {
+      "file": "runtime.zip.part-06",
+      "sha256": "2351b66f63a8c991704455c0cd97bb591dcdf406569226516a859b749a4f4646",
+      "size_bytes": 4194304
+    },
+    {
+      "file": "runtime.zip.part-07",
+      "sha256": "8893fa3ab7bb6bfb895917330eb9aebb222ed55ef020e7b8815560c381084bd3",
+      "size_bytes": 4194304
+    },
+    {
+      "file": "runtime.zip.part-08",
+      "sha256": "4e0badf153d28ec5eeb53b4f04288cd8a02cc4cdfa9d95e7e448c9bcbc0d0ee8",
+      "size_bytes": 1374916
+    }
+  ]
+}

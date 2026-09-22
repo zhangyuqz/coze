@@ -1,0 +1,93 @@
+Stable Ribbon Mind Map Generator
+
+This product includes software developed from or based on:
+
+- sawyer-shi/dify-plugins-mind_map
+  Original author: sawyer-shi
+  Source: https://github.com/sawyer-shi/dify-plugins-mind_map
+  License: Apache License 2.0
+
+Modifications by: Zhang Yu (GitHub: zhangyuqz)
+
+Major modifications include:
+
+- Report-oriented left-to-right mind map rendering.
+- Style-5 ribbon-like links.
+- Depth-aware node borders and rounded nodes.
+- Chinese text wrapping improvements.
+- Continuous-digit wrapping protection.
+- Selectable PNG/lossless WebP/animated GIF output, with PNG as the default.
+- Single selected-format image blob output behavior for Dify workflows.
+
+Version 0.0.14 additions:
+
+- Nine bundled open-source fonts and a nine-option font selector.
+- Automatic multilingual rendering across 28 scripts with zero missing glyphs.
+- Replaced the upstream Microsoft commercial Chinese font with
+  Source Han Sans SC (SIL Open Font License).
+- Pixel-budget guard for oversized documents (geometry never truncated).
+- Ribbon-end visibility fixes; concurrency hardening (thread-safe canvas,
+  render/transmission gates, cooperative-scheduler yield, import warm-up).
+
+Version 0.0.16 additions:
+
+- The bundled Han sans font is now "Ribbon Han Sans SC", a character subset
+  of Source Han Sans SC (Adobe, SIL OFL 1.1) renamed per the OFL Reserved
+  Font Name requirement. Copyright, trademark and license notices are
+  preserved inside the font and in the bundled license file.
+- Subset coverage: GB2312, high-frequency extensions, the full Japanese
+  Joyo Kanji table, full Hangul syllables, full Kana and basic Cyrillic.
+- Character-level fallback: Basic-plane Han characters outside the subset
+  are rendered with Zhuque Fangsong automatically.
+
+Version 0.0.22 experimental full-font and multilingual additions:
+
+- Replaced the former character subset with Adobe's complete, unmodified
+  Source Han Sans SC 2.005R Regular OTF from the official Adobe release.
+- Removed the subset-only retained-character bitmap and Basic CJK fallback
+  decision. All glyphs present in the official font now render directly with
+  Source Han Sans SC in the default font mode.
+- Preserved the other eight bundled font files and all 0.0.21 rendering,
+  layout, format, and tool contracts.
+
+Additional display-font assets included in version 0.0.22:
+
+- Added four font-selector modes: Fusion Pixel 12px Proportional, Tiejili SC,
+  Zhi Mang Xing and ZCOOL KuaiLe. Source Han Sans SC remains the default.
+- The new modes select their font per covered character, then fall back per
+  character to Source Han Sans SC and the established multilingual routing.
+  The original modes retain their prior behavior.
+- Added actual-glyph-ink containment for the four new modes so calligraphic
+  overhangs remain inside rounded rectangles, circles and both ellipse
+  orientations without text compression.
+- Bundled the upstream font licenses and all incorporated-component notices,
+  including the four notices distributed with Fusion Pixel Font.
+
+Additional shaping assets included in version 0.0.22:
+
+- Added Yeseva One and Bad Script as two Latin/Cyrillic display-font modes
+  without changing the thirteen earlier selector values.
+- Ordered all seventeen selector entries by their primary served script while
+  preserving every internal value and the Source Han Sans SC default.
+- Applied independent optical-size factors to Tiejili SC (1.03x), Zhi Mang Xing
+  (1.20x), and ZCOOL KuaiLe (1.08x). Only selected-font runs are compensated;
+  all fallback runs retain their existing sizes.
+- Added complete, unmodified Noto Naskh Arabic 2.021 and Noto Sans Mongolian
+  3.002 font files, with their complete SIL OFL 1.1 license texts.
+- Added isolated HarfBuzz/FreeType rasterization and Unicode bidi resolution
+  for real Uyghur contextual joining, Tibetan GSUB/GPOS stack positioning,
+  and traditional Mongolian top-to-bottom shaping with left-to-right columns.
+- Preserved traditional Mongolian FVS, MVS, NNBSP and join controls; geometry
+  measurement and final drawing now share the same complex-text alpha mask.
+- Kept the root rounded rectangle and the established deterministic 50/50
+  non-root rounded-rectangle versus adaptive circle/ellipse decision.
+
+Version 0.0.23 long-map clarity repair:
+
+- Replaced the universal 8,300-pixel edge clamp with a total-pixel canvas
+  budget and iterative DPI-aware layout, retaining the prior pixel envelope.
+- Preserved PNG resolution before bounded RGB precision reduction and
+  measured-size resampling; removed the coarse global palette fallback.
+- Limited oversized WebP exports to the codec's supported dimensions.
+- Released the completed Agg raster before Pillow drawing and recorded
+  resolution-only diagnostics without input Markdown or personal text.
