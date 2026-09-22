@@ -1,0 +1,30 @@
+{
+  "purpose": "Manual Coze IDE field reference; not an importable Coze schema",
+  "tool_name": "generate_mind_map",
+  "inputs": [
+    {"name": "markdown_content", "type": "String", "required": true},
+    {"name": "runtime_bundle_url", "type": "String", "required": true, "configuration_only": true},
+    {"name": "coze_api_token", "type": "String", "required": true, "configuration_only": true},
+    {"name": "resolver_workflow_id", "type": "String", "required": true, "configuration_only": true},
+    {"name": "filename", "type": "String", "required": false, "default": "mind-map"},
+    {"name": "font_mode", "type": "String", "required": false, "default": "heiti", "options": ["heiti", "chinese", "fusion_pixel", "tiejili", "zhi_mang_xing", "zcool_kuaile", "english", "yeseva_one", "bad_script", "uyghur", "tibetan", "mongolian", "lao", "myanmar", "khmer", "telugu", "kannada"]},
+    {"name": "theme", "type": "String", "required": false, "default": "dark", "options": ["dark", "light"]},
+    {"name": "output_format", "type": "String", "required": false, "default": "png", "options": ["png", "webp", "gif"]},
+    {"name": "render_scale", "type": "Number", "required": false, "default": 0.56},
+    {"name": "max_blob_mb", "type": "Number", "required": false, "default": 3.2}
+  ],
+  "outputs": [
+    {"name": "success", "type": "Boolean"},
+    {"name": "image_url", "type": "String"},
+    {"name": "download_url", "type": "String"},
+    {"name": "image_markdown", "type": "String"},
+    {"name": "file_id", "type": "String"},
+    {"name": "filename", "type": "String"},
+    {"name": "mime_type", "type": "String"},
+    {"name": "width", "type": "Number"},
+    {"name": "height", "type": "Number"},
+    {"name": "size_bytes", "type": "Number"},
+    {"name": "error_stage", "type": "String"},
+    {"name": "error", "type": "String"}
+  ]
+}
